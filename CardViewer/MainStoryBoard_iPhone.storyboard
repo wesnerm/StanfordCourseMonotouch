@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Ib-BY-ptY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Card Chooser View Controller - Choose-->
+        <scene sceneID="2dV-c5-kID">
+            <objects>
+                <viewController title="Choose" id="Bh4-3l-bJY" customClass="CardChooserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G7a-ce-Rks">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Brr-HR-KbR">
+                                <segments>
+                                    <segment title="♠"/>
+                                    <segment title="♣"/>
+                                    <segment title="♥"/>
+                                    <segment title="♦"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="13" translatesAutoresizingMaskIntoConstraints="NO" id="oFv-EB-CYY">
+                                <connections>
+                                    <action selector="changeRank:" destination="Bh4-3l-bJY" eventType="valueChanged" id="MMR-ar-12f"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose the card you want:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-Nk-VCs">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-JQ-iDc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="3XQ-sU-1p6"/>
+                                    <constraint firstAttribute="width" constant="31" id="W6E-ng-Iyk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY2-OF-3HF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show me the card!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZEa-ta-bz4" kind="push" identifier="ShowCard" id="Mio-vw-OLe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KY2-OF-3HF" secondAttribute="bottom" constant="162" id="3rP-fQ-Vfv"/>
+                            <constraint firstAttribute="trailing" secondItem="oFv-EB-CYY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4ZR-1q-Q0u"/>
+                            <constraint firstItem="KY2-OF-3HF" firstAttribute="centerX" secondItem="Brr-HR-KbR" secondAttribute="centerX" type="default" id="5Iy-YH-geP"/>
+                            <constraint firstItem="oFv-EB-CYY" firstAttribute="centerX" secondItem="d9H-JQ-iDc" secondAttribute="centerX" type="default" id="72J-bU-VZu"/>
+                            <constraint firstItem="Brr-HR-KbR" firstAttribute="top" secondItem="d9H-JQ-iDc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HVk-rh-h2b"/>
+                            <constraint firstItem="d9H-JQ-iDc" firstAttribute="top" secondItem="G7a-ce-Rks" secondAttribute="top" constant="71" id="NLc-wA-Awg"/>
+                            <constraint firstItem="oFv-EB-CYY" firstAttribute="top" secondItem="bNL-Nk-VCs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SU1-YG-rUc"/>
+                            <constraint firstItem="bNL-Nk-VCs" firstAttribute="top" secondItem="G7a-ce-Rks" secondAttribute="top" constant="20" symbolic="YES" type="default" id="WkQ-v0-YBn"/>
+                            <constraint firstItem="bNL-Nk-VCs" firstAttribute="leading" secondItem="G7a-ce-Rks" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YJp-qR-k14"/>
+                            <constraint firstItem="Brr-HR-KbR" firstAttribute="leading" secondItem="G7a-ce-Rks" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hf6-NW-1mg"/>
+                            <constraint firstItem="oFv-EB-CYY" firstAttribute="leading" secondItem="G7a-ce-Rks" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kLf-xS-uPy"/>
+                            <constraint firstAttribute="trailing" secondItem="Brr-HR-KbR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qpm-Lq-rhR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Card" id="fco-a4-Ilx"/>
+                    <connections>
+                        <outlet property="rankLabel" destination="d9H-JQ-iDc" id="DHK-it-MaH"/>
+                        <outlet property="suitSegmentedControl" destination="Brr-HR-KbR" id="CM3-Af-1hw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBF-HD-akh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-256"/>
+        </scene>
+        <!--Card Display View Controller-->
+        <scene sceneID="yZJ-hJ-tD3">
+            <objects>
+                <viewController id="ZEa-ta-bz4" customClass="CardDisplayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NQk-JC-Zdf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvJ-L9-H6H" customClass="PlayingCardView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PvJ-L9-H6H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="A0e-dx-YyJ"/>
+                            <constraint firstItem="PvJ-L9-H6H" firstAttribute="leading" secondItem="NQk-JC-Zdf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZJh-2V-aGe"/>
+                            <constraint firstItem="PvJ-L9-H6H" firstAttribute="top" secondItem="NQk-JC-Zdf" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jBd-cn-TCu"/>
+                            <constraint firstAttribute="bottom" secondItem="PvJ-L9-H6H" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rt6-Y8-MFf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="17T-SC-jnA"/>
+                    <connections>
+                        <outlet property="playingCardView" destination="PvJ-L9-H6H" id="qUh-62-N2r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BI1-Xj-3af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-255"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yY8-kS-v81">
+            <objects>
+                <navigationController id="0Ib-BY-ptY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mku-yI-kiG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bh4-3l-bJY" kind="relationship" relationship="rootViewController" id="Qmc-Xk-WBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sl-qj-egg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="-256"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CardChooserViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardChooserViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeRank:"/>
+                <relationship kind="outlet" name="rankLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="suitSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="CardDisplayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardDisplayViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="playingCardView" candidateClass="PlayingCardView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayingCardView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayingCardView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{869968EB-705B-41EB-AFFC-23748EB6B258}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WM</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CardViewer</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>True</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CardChooser.cs" />
+    <Compile Include="CardChooser.designer.cs">
+      <DependentUpon>CardChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardChooserViewController.cs" />
+    <Compile Include="CardChooserViewController.designer.cs">
+      <DependentUpon>CardChooserViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardDisplayViewController.cs" />
+    <Compile Include="CardDisplayViewController.designer.cs">
+      <DependentUpon>CardDisplayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PlayingCardDeck.cs" />
+    <Compile Include="Model\PlayingCard.cs" />
+    <Compile Include="Model\Deck.cs" />
+    <Compile Include="Model\CardMatchingGame.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="PlayingCardView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Support\J♠.jpg" />
+    <BundleResource Include="Support\J♠%402x.jpg" />
+    <BundleResource Include="Support\J♣.jpg" />
+    <BundleResource Include="Support\J♣%402x.jpg" />
+    <BundleResource Include="Support\J♥.jpg" />
+    <BundleResource Include="Support\J♥%402x.jpg" />
+    <BundleResource Include="Support\J♦.jpg" />
+    <BundleResource Include="Support\J♦%402x.jpg" />
+    <BundleResource Include="Support\K♠.jpg" />
+    <BundleResource Include="Support\K♠%402x.jpg" />
+    <BundleResource Include="Support\K♣.jpg" />
+    <BundleResource Include="Support\K♣%402x.jpg" />
+    <BundleResource Include="Support\K♥.jpg" />
+    <BundleResource Include="Support\K♥%402x.jpg" />
+    <BundleResource Include="Support\K♦.jpg" />
+    <BundleResource Include="Support\K♦%402x.jpg" />
+    <BundleResource Include="Support\Q♠.jpg" />
+    <BundleResource Include="Support\Q♠%402x.jpg" />
+    <BundleResource Include="Support\Q♣.jpg" />
+    <BundleResource Include="Support\Q♣%402x.jpg" />
+    <BundleResource Include="Support\Q♥.jpg" />
+    <BundleResource Include="Support\Q♥%402x.jpg" />
+    <BundleResource Include="Support\Q♦.jpg" />
+    <BundleResource Include="Support\Q♦%402x.jpg" />
+    <BundleResource Include="Support\cardback.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryBoard_iPhone.storyboard" />
+    <InterfaceDefinition Include="CardChooser.xib" />
+  </ItemGroup>
+</Project>
