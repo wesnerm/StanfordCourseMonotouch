@@ -5,8 +5,7 @@ namespace WM
 {
     public static class FlickrFetcher
     {
-		public const string FlickrApiKey = "88a112acccd92e7e39f6e4dcc2967d2e";
-		// secret - 954393a5ba9164df
+	public const string FlickrApiKey = "--your api key--";
 
         public const string FlickrPhotoTitle = "title";
         public const string FlickrPhotoDescription = "description._content";
